@@ -1,0 +1,130 @@
+/* Oxdelight v3 tokens (src/theme/tokens.ts): three tones only — greys, green, red. */
+:root {
+  --bg: #0a0a0b;
+  --surface: #131315;
+  --surface2: #1b1b1e;
+  --hair: rgba(255, 255, 255, 0.07);
+  --hair2: rgba(255, 255, 255, 0.11);
+  --text: #ededef;
+  --muted: #8c8c93;
+  --faint: #5a5a61;
+  --green: #3fb950;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f7f8;
+    --surface: #ffffff;
+    --surface2: #f0f0f2;
+    --hair: rgba(0, 0, 0, 0.07);
+    --hair2: rgba(0, 0, 0, 0.11);
+    --text: #111113;
+    --muted: #66666d;
+    --faint: #a3a3aa;
+    --green: #1a7f37;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.005em;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 56px 18px 64px;
+}
+.mark {
+  display: block;
+  border-radius: 19px;
+  margin-bottom: 24px;
+}
+.eyebrow {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 14px;
+}
+h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.lead {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.card p {
+  margin: 0 0 10px;
+}
+.card p:last-child,
+.card ul:last-child {
+  margin-bottom: 0;
+}
+.card ul {
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+.card li {
+  margin-bottom: 6px;
+}
+code {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 13px;
+  background: var(--surface2);
+  border-radius: 6px;
+  padding: 1px 6px;
+}
+a {
+  color: var(--text);
+  text-decoration-color: var(--faint);
+  text-underline-offset: 3px;
+}
+a:hover {
+  text-decoration-color: var(--text);
+}
+.back {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 28px;
+}
+footer {
+  display: flex;
+  gap: 10px;
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--faint);
+}
+footer a {
+  color: var(--muted);
+}
